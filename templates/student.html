@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Page</title>
+</head>
+<body>
+    <h1>Hi {{ name }}!</h1>
+    <p>Your unique ID is: {{ unique_id }}</p>
+    <h2>Student Recommendation:</h2>
+    <ul>
+        {% for rec in rec_id %}
+        <li><a href="{{ url_for('student_page', name=rec[0], unique_id=rec[1]) }}">{{ rec[0] }} - ({{ rec[1] }})</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
