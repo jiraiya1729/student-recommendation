@@ -22,7 +22,6 @@ def find_ids(index):
     df1 = pd.read_csv('students_data.csv')
     print(index, df.index)
     if index in df.index:
-        # Get the row corresponding to the index
         row_values = df.loc[index].values.tolist() 
         id = []
         for i in row_values:
