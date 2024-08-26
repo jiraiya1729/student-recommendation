@@ -15,3 +15,9 @@ def recommend(features):
     print(result)
     userids = [match['id'] for match in result['matches']]
     return userids
+
+
+def insert_user_features(userid, features):
+    index.upsert(vectors = [(str(userid), features.tolist())])
+    return
+    
