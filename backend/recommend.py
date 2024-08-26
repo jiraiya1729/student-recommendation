@@ -1,6 +1,9 @@
 from pinecone import Pinecone, ServerlessSpec
+from dotenv import load_dotenv
+import os
 
-pc = Pinecone(api_key = '')
+api_key = os.getenv('PINECONE_API_KEY')
+pc = Pinecone(api_key = api_key)
 
 index = pc.Index('')
 
