@@ -1,8 +1,8 @@
 from pinecone import Pinecone, ServerlessSpec
 
-pc = Pinecone(api_key = 'c2e5f0ee-76a2-4130-87b2-3caf15a2942c')
+pc = Pinecone(api_key = '')
 
-index = pc.Index('student-recommendations')
+index = pc.Index('')
 
 def recommend(features):
     result = index.query(
